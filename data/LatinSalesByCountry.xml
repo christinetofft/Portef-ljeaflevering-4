@@ -1,0 +1,140 @@
+<DATA>
+
+	<ROW>
+		<BillingCountry>Sweden</BillingCountry>
+		<Genre>Latin</Genre>
+		<SalesPercentage>31.5789</SalesPercentage>
+	</ROW>
+
+	<ROW>
+		<BillingCountry>Brazil</BillingCountry>
+		<Genre>Latin</Genre>
+		<SalesPercentage>27.8947</SalesPercentage>
+	</ROW>
+
+	<ROW>
+		<BillingCountry>United Kingdom</BillingCountry>
+		<Genre>Latin</Genre>
+		<SalesPercentage>27.1930</SalesPercentage>
+	</ROW>
+
+	<ROW>
+		<BillingCountry>Finland</BillingCountry>
+		<Genre>Latin</Genre>
+		<SalesPercentage>23.6842</SalesPercentage>
+	</ROW>
+
+	<ROW>
+		<BillingCountry>Chile</BillingCountry>
+		<Genre>Latin</Genre>
+		<SalesPercentage>21.0526</SalesPercentage>
+	</ROW>
+
+	<ROW>
+		<BillingCountry>Argentina</BillingCountry>
+		<Genre>Latin</Genre>
+		<SalesPercentage>21.0526</SalesPercentage>
+	</ROW>
+
+	<ROW>
+		<BillingCountry>Canada</BillingCountry>
+		<Genre>Latin</Genre>
+		<SalesPercentage>19.7368</SalesPercentage>
+	</ROW>
+
+	<ROW>
+		<BillingCountry>USA</BillingCountry>
+		<Genre>Latin</Genre>
+		<SalesPercentage>18.4211</SalesPercentage>
+	</ROW>
+
+	<ROW>
+		<BillingCountry>Ireland</BillingCountry>
+		<Genre>Latin</Genre>
+		<SalesPercentage>18.4211</SalesPercentage>
+	</ROW>
+
+	<ROW>
+		<BillingCountry>Poland</BillingCountry>
+		<Genre>Latin</Genre>
+		<SalesPercentage>18.4211</SalesPercentage>
+	</ROW>
+
+	<ROW>
+		<BillingCountry>Portugal</BillingCountry>
+		<Genre>Latin</Genre>
+		<SalesPercentage>17.1053</SalesPercentage>
+	</ROW>
+
+	<ROW>
+		<BillingCountry>France</BillingCountry>
+		<Genre>Latin</Genre>
+		<SalesPercentage>13.6842</SalesPercentage>
+	</ROW>
+
+	<ROW>
+		<BillingCountry>Norway</BillingCountry>
+		<Genre>Latin</Genre>
+		<SalesPercentage>13.1579</SalesPercentage>
+	</ROW>
+
+	<ROW>
+		<BillingCountry>India</BillingCountry>
+		<Genre>Latin</Genre>
+		<SalesPercentage>12.1622</SalesPercentage>
+	</ROW>
+
+	<ROW>
+		<BillingCountry>Czech Republic</BillingCountry>
+		<Genre>Latin</Genre>
+		<SalesPercentage>11.8421</SalesPercentage>
+	</ROW>
+
+	<ROW>
+		<BillingCountry>Germany</BillingCountry>
+		<Genre>Latin</Genre>
+		<SalesPercentage>11.8421</SalesPercentage>
+	</ROW>
+
+	<ROW>
+		<BillingCountry>Spain</BillingCountry>
+		<Genre>Latin</Genre>
+		<SalesPercentage>10.5263</SalesPercentage>
+	</ROW>
+
+	<ROW>
+		<BillingCountry>Denmark</BillingCountry>
+		<Genre>Latin</Genre>
+		<SalesPercentage>10.5263</SalesPercentage>
+	</ROW>
+
+	<ROW>
+		<BillingCountry>Netherlands</BillingCountry>
+		<Genre>Latin</Genre>
+		<SalesPercentage>7.8947</SalesPercentage>
+	</ROW>
+
+	<ROW>
+		<BillingCountry>Hungary</BillingCountry>
+		<Genre>Latin</Genre>
+		<SalesPercentage>7.8947</SalesPercentage>
+	</ROW>
+
+	<ROW>
+		<BillingCountry>Australia</BillingCountry>
+		<Genre>Latin</Genre>
+		<SalesPercentage>5.2632</SalesPercentage>
+	</ROW>
+
+	<ROW>
+		<BillingCountry>Austria</BillingCountry>
+		<Genre>Latin</Genre>
+		<SalesPercentage>5.2632</SalesPercentage>
+	</ROW>
+
+	<ROW>
+		<BillingCountry>Italy</BillingCountry>
+		<Genre>Latin</Genre>
+		<SalesPercentage>5.2632</SalesPercentage>
+	</ROW>
+</DATA>

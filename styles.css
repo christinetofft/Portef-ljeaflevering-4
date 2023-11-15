@@ -24,6 +24,10 @@ h1 {
 
 
 /* Leaflet Map Section */
+.emily-world-map {
+    display: flex;
+    justify-content: center;
+}
 #map {
     width: 800px;
     height: 500px;

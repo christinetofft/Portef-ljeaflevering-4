@@ -16,14 +16,41 @@ const sverigeGenres = new Chart(ctx, {
         datasets: [{
             data: salePercentages,
             label: "Procent af salg",
-            backgroundColor:"green"
+            backgroundColor:"darkgreen"
         }],
     },
     options: {
         plugins: {
             legend: {
-                font: {
-                    size: 100
+                display: false
+            }
+        },
+        scales: {
+            x: {
+                grid: {
+                    display: false
+                },
+                ticks: {
+                    font: {
+                        weight: 'bold'
+                    }
+                }
+            },
+            y: {
+                title: {
+                    display: true,
+                    text: 'Procent %',
+                    font: {
+                        weight: 'bold'
+                    }
+                },
+                grid: {
+                    display: false
+                },
+                ticks: {
+                    font: {
+                        weight: 'bold'
+                    }
                 }
             }
         }

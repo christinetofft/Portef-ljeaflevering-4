@@ -1,4 +1,17 @@
 h1 {
+    text-align: center;
+}
+
+.nikolaj-se-top-genre{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+}
+.nikolaj-text-til-graf{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial;
+}
+.nikolaj-graf{
+    max-width: 100%;
 }

@@ -2,3 +2,14 @@ h1 {
     display: flex;
     justify-content: center;
 }
+
+.nikolaj-se-top-genre{
+    display: flex;
+    flex-direction: column;
+}
+.nikolaj-text-til-graf{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial;
+}

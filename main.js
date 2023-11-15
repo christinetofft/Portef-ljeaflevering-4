@@ -1,3 +1,4 @@
+//Nikolaj
 console.log(genreSales)
 let genres = [];
 let salePercentages = [];
@@ -31,8 +32,10 @@ const sverigeGenres = new Chart(ctx, {
                     display: false
                 },
                 ticks: {
+                    minRotation: 0,
+                    maxRotation: 0,
                     font: {
-                        size: 16,
+                        size: 14,
                         family: "Calibri"
                     }
                 }
@@ -46,7 +49,7 @@ const sverigeGenres = new Chart(ctx, {
                         return value + "%";
                     },
                     font: {
-                        size: 16,
+                        size: 14,
                         family: "Calibri"
                     }
                 },
@@ -56,8 +59,8 @@ const sverigeGenres = new Chart(ctx, {
     }
 })
 
+
 //Christine:
-console.log(latinSalesByCountries)
 
 let country = [];
 let percentageOfSales = [];
@@ -67,9 +70,8 @@ latinSalesByCountries.forEach(sale => {
     percentageOfSales.push(sale.SalesPercentage)
 })
 
-
 const latinSalesChart = document.querySelector('#sales-by-countries').getContext('2d');
-const barColors = ["#006AA7", "#FECC02", "#FECC02", "#FECC02", "#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02",]
+const barColors = ["#00308F", "#ffe98b", "#ffe98b", "#ffe98b", "#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b",]
 
 new Chart(latinSalesChart, {
     type: "bar",
@@ -77,8 +79,9 @@ new Chart(latinSalesChart, {
         labels: country,
         datasets: [{
             backgroundColor: barColors,
-            barThickness: 14,
-            data: percentageOfSales
+            barThickness: 18,
+            data: percentageOfSales,
+            borderColor: 'black',
         }]
     },
     options: {
@@ -88,23 +91,18 @@ new Chart(latinSalesChart, {
             legend: {
                 display: false,
             },
-            title: {
-                display: true,
-                text: "Sverige har den største salgsprocent i Latin-musik:"
-            },
         },
         scales: {
             x: {
                 grid: {
                     display: false,
                 },
-                title: {
-                    display: true,
-                    text: "Salgsprocent"
-                },
                 ticks: {
                     callback: function (value) {
                         return value + "%";
+                    },
+                    font: {
+                        weight: "bold",
                     }
                 }
             },
@@ -112,6 +110,15 @@ new Chart(latinSalesChart, {
                 grid: {
                     display: false,
                 },
+                ticks: {
+                    font: function(context) {
+                        if (context.index === 0)
+                        return {
+                            weight: "bold"
+                        }
+                    }
+
+                }
             },
         },
     },

@@ -80,7 +80,7 @@ new Chart(latinSalesChart, {
         labels: country,
         datasets: [{
             backgroundColor: barColors,
-            barThickness: 14,
+            barThickness: 18,
             data: percentageOfSales,
             borderColor: 'black',
         }]

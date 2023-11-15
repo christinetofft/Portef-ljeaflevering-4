@@ -32,26 +32,25 @@ const sverigeGenres = new Chart(ctx, {
                 },
                 ticks: {
                     font: {
-                        weight: 'bold'
+                        size: 16,
+                        family: "Calibri"
                     }
                 }
             },
             y: {
-                title: {
-                    display: true,
-                    text: 'Procent %',
-                    font: {
-                        weight: 'bold'
-                    }
-                },
                 grid: {
                     display: false
                 },
                 ticks: {
+                    callback: function (value) {
+                        return value + "%";
+                    },
                     font: {
-                        weight: 'bold'
+                        size: 16,
+                        family: "Calibri"
                     }
-                }
+                },
+
             }
         }
     }

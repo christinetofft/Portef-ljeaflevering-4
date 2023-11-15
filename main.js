@@ -1,3 +1,4 @@
+//Nikolaj
 console.log(genreSales)
 let genres = [];
 let salePercentages = [];
@@ -31,8 +32,10 @@ const sverigeGenres = new Chart(ctx, {
                     display: false
                 },
                 ticks: {
+                    minRotation: 0,
+                    maxRotation: 0,
                     font: {
-                        size: 16,
+                        size: 14,
                         family: "Calibri"
                     }
                 }
@@ -46,7 +49,7 @@ const sverigeGenres = new Chart(ctx, {
                         return value + "%";
                     },
                     font: {
-                        size: 16,
+                        size: 14,
                         family: "Calibri"
                     }
                 },

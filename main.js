@@ -43,10 +43,7 @@ latinSalesByCountries.forEach(sale => {
 
 
 const latinSalesChart = document.querySelector('#sales-by-countries').getContext('2d');
-const barColors = ["blue", "lightgrey", "lightgrey", "lightgrey", "lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey",]
-const latinMusicImage = new Image();
-latinMusicImage.src = 'https://www.libertyparkmusic.com/wp-content/uploads/Depositphotos_74762549_xl-2015.jpg'
-
+const barColors = ["#006AA7", "#FECC02", "#FECC02", "#FECC02", "#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02",]
 
 new Chart(latinSalesChart, {
     type: "bar",
@@ -54,17 +51,36 @@ new Chart(latinSalesChart, {
         labels: country,
         datasets: [{
             backgroundColor: barColors,
+            barThickness: 14,
             data: percentageOfSales
         }]
     },
     options: {
         indexAxis: 'y',
         responsive: true,
+        plugins: {
+            legend: {
+                display: false,
+            },
+            title: {
+                display: true,
+                text: "Sverige har den største salgsprocent i Latin-musik:"
+            },
+        },
         scales: {
             x: {
                 grid: {
                     display: false,
                 },
+                title: {
+                    display: true,
+                    text: "Salgsprocent"
+                },
+                ticks: {
+                    callback: function (value) {
+                        return value + "%";
+                    }
+                }
             },
             y: {
                 grid: {
@@ -72,10 +88,5 @@ new Chart(latinSalesChart, {
                 },
             },
         },
-        legend: {display: false},
-        title: {
-        display: true,
-        text: "Latinmusik salgsprocent i forskellige lande"
-        }
     },
 });

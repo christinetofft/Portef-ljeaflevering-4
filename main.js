@@ -70,7 +70,7 @@ latinSalesByCountries.forEach(sale => {
 
 
 const latinSalesChart = document.querySelector('#sales-by-countries').getContext('2d');
-const barColors = ["#006AA7", "#FECC02", "#FECC02", "#FECC02", "#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02","#FECC02",]
+const barColors = ["#00308F", "#ffe98b", "#ffe98b", "#ffe98b", "#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b",]
 
 new Chart(latinSalesChart, {
     type: "bar",
@@ -79,7 +79,8 @@ new Chart(latinSalesChart, {
         datasets: [{
             backgroundColor: barColors,
             barThickness: 14,
-            data: percentageOfSales
+            data: percentageOfSales,
+            borderColor: 'black',
         }]
     },
     options: {
@@ -89,23 +90,18 @@ new Chart(latinSalesChart, {
             legend: {
                 display: false,
             },
-            title: {
-                display: true,
-                text: "Sverige har den største salgsprocent i Latin-musik:"
-            },
         },
         scales: {
             x: {
                 grid: {
                     display: false,
                 },
-                title: {
-                    display: true,
-                    text: "Salgsprocent"
-                },
                 ticks: {
                     callback: function (value) {
                         return value + "%";
+                    },
+                    font: {
+                        weight: "bold",
                     }
                 }
             },
@@ -113,6 +109,15 @@ new Chart(latinSalesChart, {
                 grid: {
                     display: false,
                 },
+                ticks: {
+                    font: function(context) {
+                        if (context.index === 0)
+                        return {
+                            weight: "bold"
+                        }
+                    }
+
+                }
             },
         },
     },

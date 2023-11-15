@@ -29,11 +29,28 @@ const sverigeGenres = new Chart(ctx, {
             x: {
                 grid: {
                     display: false
+                },
+                ticks: {
+                    font: {
+                        weight: 'bold'
+                    }
                 }
             },
             y: {
+                title: {
+                    display: true,
+                    text: 'Procent %',
+                    font: {
+                        weight: 'bold'
+                    }
+                },
                 grid: {
                     display: false
+                },
+                ticks: {
+                    font: {
+                        weight: 'bold'
+                    }
                 }
             }
         }

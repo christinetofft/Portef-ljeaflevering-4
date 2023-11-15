@@ -1,14 +1,32 @@
 console.log(genreSales)
+let genres = [];
+let salePercentages = [];
+genreSales.forEach((genre) => {
+    genres.push(genre.name)
+    salePercentages.push(genre.TotalSales)
+});
 
-const ctx = document.querySelector('#chart').getContext('2d');
-const chart = new Chart(ctx, {
+console.log(genres)
+console.log(salePercentages)
+const ctx = document.querySelector('#se-sales').getContext('2d');
+const sverigeGenres = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ["2018","2019","2020","2021"],
+        labels: genres,
         datasets: [{
-            data: [1000, 820, 600, 460],
-            label: "Denmark"
+            data: salePercentages,
+            label: "Procent af salg",
+            backgroundColor:"green"
         }],
+    },
+    options: {
+        plugins: {
+            legend: {
+                font: {
+                    size: 100
+                }
+            }
+        }
     }
 })
 

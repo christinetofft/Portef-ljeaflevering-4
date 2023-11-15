@@ -1,5 +1,8 @@
 h1 {
     text-align: center;
+    font-weight: bold;
+    font-family: Calibri;
+    font-size: 32px;
 }
 
 .nikolaj-se-top-genre{
@@ -10,8 +13,11 @@ h1 {
     text-align: center;
     font-size: 18px;
     font-weight: bold;
-    font-family: Arial;
+    font-family: Calibri;
 }
 .nikolaj-graf{
-    max-width: 100%;
+    width: 66%;
+    margin-left: auto;
+    margin-right: auto;
 }
+

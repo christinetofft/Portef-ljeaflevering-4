@@ -30,17 +30,23 @@ const sverigeGenres = new Chart(ctx, {
     }
 })
 
+//Christine:
 console.log(latinSalesByCountries)
 
 let country = [];
 let percentageOfSales = [];
+
 latinSalesByCountries.forEach(sale => {
     country.push(sale.BillingCountry)
     percentageOfSales.push(sale.SalesPercentage)
 })
 
-const barColors = ["red"]
+
 const latinSalesChart = document.querySelector('#sales-by-countries').getContext('2d');
+const barColors = ["blue", "lightgrey", "lightgrey", "lightgrey", "lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey","lightgrey",]
+const latinMusicImage = new Image();
+latinMusicImage.src = 'https://www.libertyparkmusic.com/wp-content/uploads/Depositphotos_74762549_xl-2015.jpg'
+
 
 new Chart(latinSalesChart, {
     type: "bar",
@@ -53,6 +59,23 @@ new Chart(latinSalesChart, {
     },
     options: {
         indexAxis: 'y',
-        responsive: true
-    },}
-);
+        responsive: true,
+        scales: {
+            x: {
+                grid: {
+                    display: false,
+                },
+            },
+            y: {
+                grid: {
+                    display: false,
+                },
+            },
+        },
+        legend: {display: false},
+        title: {
+        display: true,
+        text: "Latinmusik salgsprocent i forskellige lande"
+        }
+    },
+});

@@ -52,7 +52,7 @@ function zoomToHighlight(element) {
 }
 
 /* Function to add event listeners to make above highlight / zoom functions work */
-function onEachFeature(feature, mapLayer) {
+function mouseEventListeners(feature, mapLayer) {
     mapLayer.on({
         mouseover: highlightCountry,
         mouseout: resetHighlight,
@@ -62,7 +62,7 @@ function onEachFeature(feature, mapLayer) {
 
 geojson = L.geoJson(countryData, {
     style: mapStyle,
-    onEachFeature: onEachFeature
+    onEachFeature: mouseEventListeners
 }).addTo(map);
 
 // ----------------------

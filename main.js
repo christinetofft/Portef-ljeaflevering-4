@@ -56,8 +56,8 @@ const sverigeGenres = new Chart(ctx, {
     }
 })
 
+
 //Christine:
-console.log(latinSalesByCountries)
 
 let country = [];
 let percentageOfSales = [];
@@ -66,7 +66,6 @@ latinSalesByCountries.forEach(sale => {
     country.push(sale.BillingCountry)
     percentageOfSales.push(sale.SalesPercentage)
 })
-
 
 const latinSalesChart = document.querySelector('#sales-by-countries').getContext('2d');
 const barColors = ["#00308F", "#ffe98b", "#ffe98b", "#ffe98b", "#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b","#ffe98b",]

@@ -5,6 +5,13 @@ h1 {
     font-size: 32px;
 }
 
+/* 32% Section styling */
+.emily-sweden-map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .nikolaj-se-top-genre{
     display: flex;
     flex-direction: column;

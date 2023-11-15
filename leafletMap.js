@@ -1,4 +1,9 @@
-let geojson;
+/*
+    Guide used for map colouring:
+    https://leafletjs.com/examples/choropleth/
+    Country polygon data for leaflet from: (slightly tweaked for our use)
+    https://datahub.io/core/geo-countries
+ */
 
 const map = L.map('map').setView([62, 15], 4);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -20,9 +25,10 @@ function getCountry(country) {
 function mapStyle(feature) {
     return {
         fillColor: getCountry(feature.properties.Country),
-        color: '',
-        weight: 1,
+        color: 'white',
+        weight: 0,
         fillOpacity: 0.4,
+        dashArray: '5'
     }
 }
 
@@ -31,7 +37,7 @@ function highlightCountry(element) {
     let mapLayer = element.target;
 
     mapLayer.setStyle({
-        weight: 4,
+        weight: 1.5,
         fillOpacity: 0.8
     });
 

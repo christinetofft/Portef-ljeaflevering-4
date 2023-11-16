@@ -1,3 +1,6 @@
+body {
+    background-color: #e3e8e5;
+}
 
 section {
     width: 66%;
@@ -32,6 +35,9 @@ h1 {
 }
 
 .procent {
+    background-image: linear-gradient(335deg, darkgreen, seagreen);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 100px;
     color: darkgreen;
     font-weight: bolder;

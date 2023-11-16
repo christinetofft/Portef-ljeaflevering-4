@@ -78,6 +78,10 @@ h1 {
     margin-bottom: 40px;
 }
 
+#sales-by-countries {
+    min-height: 500px;
+}
+
 .emily-text{
     text-align: center;
     font-size: 18px;

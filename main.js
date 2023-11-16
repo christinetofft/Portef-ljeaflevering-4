@@ -1,11 +1,11 @@
 //Nikolaj
-let genres = [];
-let salePercentages = [];
+const genres = [];
+const salePercentages = [];
 genreSales.forEach((genre) => {
+    const roundedNumbers = Math.round(genre.TotalSales)
     genres.push(genre.name)
-    salePercentages.push(genre.TotalSales)
+    salePercentages.push(roundedNumbers)
 });
-
 const ctx = document.querySelector('#se-sales').getContext('2d');
 const sverigeGenres = new Chart(ctx, {
     type: 'bar',
@@ -13,7 +13,6 @@ const sverigeGenres = new Chart(ctx, {
         labels: genres,
         datasets: [{
             data: salePercentages,
-            label: "Procent af salg",
             backgroundColor:"darkgreen"
         }],
     },
@@ -21,6 +20,13 @@ const sverigeGenres = new Chart(ctx, {
         plugins: {
             legend: {
                 display: false
+            },
+            tooltip: {
+                callbacks: {
+                    label: function(tooltipItem) {
+                        return 'Procent: ' + tooltipItem.raw + '%';
+                    }
+                }
             }
         },
         scales: {
@@ -59,12 +65,13 @@ const sverigeGenres = new Chart(ctx, {
 
 //Christine:
 
-let country = [];
-let percentageOfSales = [];
+const country = [];
+const percentageOfSales = [];
 
 latinSalesByCountries.forEach(sale => {
+    const roundedNumber = Math.round(sale.SalesPercentage)
     country.push(sale.BillingCountry)
-    percentageOfSales.push(sale.SalesPercentage)
+    percentageOfSales.push(roundedNumber)
 })
 
 const latinSalesChart = document.querySelector('#sales-by-countries').getContext('2d');
@@ -84,10 +91,18 @@ new Chart(latinSalesChart, {
     options: {
         indexAxis: 'y',
         responsive: true,
+        maintainAspectRatio: false,
         plugins: {
             legend: {
                 display: false,
             },
+            tooltip: {
+                callbacks: {
+                    label: function(tooltipItem) {
+                        return 'Procent: ' + tooltipItem.raw + '%';
+                    }
+                }
+            }
         },
         scales: {
             x: {

@@ -1,28 +1,32 @@
 //Nikolaj
+//Laver 2 tomme arrays som skal være data for barchartet
 const genres = [];
 const salePercentages = [];
+//Iterrere igennem dataten, afrunder tallene og pusher dem ind i de forrige arrays
 genreSales.forEach((genre) => {
     const roundedNumbers = Math.round(genre.TotalSales)
     genres.push(genre.name)
     salePercentages.push(roundedNumbers)
 });
+//Opsætter chart
 const ctx = document.querySelector('#se-sales').getContext('2d');
 const sverigeGenres = new Chart(ctx, {
-    type: 'bar',
+    type: 'bar', //laver det til et bar chart
     data: {
-        labels: genres,
+        labels: genres, //tilføjer min x-akse data
         datasets: [{
-            data: salePercentages,
-            backgroundColor:"darkgreen"
+            data: salePercentages, //tilføjer min y-akse data
+            backgroundColor:"darkgreen" // Bar farven andæres til mørkegrøn
         }],
     },
     options: {
         plugins: {
             legend: {
-                display: false
+                display: false //fjerne legend fra chart
             },
             tooltip: {
                 callbacks: {
+                    //Procent vises nør mussen hover over bars på siden
                     label: function(tooltipItem) {
                         return 'Procent: ' + tooltipItem.raw + '%';
                     }
@@ -32,12 +36,14 @@ const sverigeGenres = new Chart(ctx, {
         scales: {
             x: {
                 grid: {
-                    display: false
+                    display: false // fjerner gridlines
                 },
                 ticks: {
+                    //Ændre x-akse data tilerne så de står vandrette
                     minRotation: 0,
                     maxRotation: 0,
                     font: {
+                        //ændre font size og family
                         size: 14,
                         family: "Calibri"
                     }
@@ -45,13 +51,15 @@ const sverigeGenres = new Chart(ctx, {
             },
             y: {
                 grid: {
-                    display: false
+                    display: false //fjerne gridlines
                 },
                 ticks: {
+                    //Tilføjer % tegn til y-akse data
                     callback: function (value) {
                         return value + "%";
                     },
                     font: {
+                        //ændre font size og family
                         size: 14,
                         family: "Calibri"
                     }

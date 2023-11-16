@@ -6,7 +6,6 @@ genreSales.forEach((genre) => {
     genres.push(genre.name)
     salePercentages.push(roundedNumbers)
 });
-
 const ctx = document.querySelector('#se-sales').getContext('2d');
 const sverigeGenres = new Chart(ctx, {
     type: 'bar',
@@ -14,7 +13,6 @@ const sverigeGenres = new Chart(ctx, {
         labels: genres,
         datasets: [{
             data: salePercentages,
-            label: "Procent af salg",
             backgroundColor:"darkgreen"
         }],
     },
@@ -22,6 +20,13 @@ const sverigeGenres = new Chart(ctx, {
         plugins: {
             legend: {
                 display: false
+            },
+            tooltip: {
+                callbacks: {
+                    label: function(tooltipItem) {
+                        return 'Procent: ' + tooltipItem.raw + '%';
+                    }
+                }
             }
         },
         scales: {
@@ -90,6 +95,13 @@ new Chart(latinSalesChart, {
             legend: {
                 display: false,
             },
+            tooltip: {
+                callbacks: {
+                    label: function(tooltipItem) {
+                        return 'Procent: ' + tooltipItem.raw + '%';
+                    }
+                }
+            }
         },
         scales: {
             x: {

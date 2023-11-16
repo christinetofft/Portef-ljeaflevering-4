@@ -36,13 +36,12 @@ h1 {
 
 .procent {
     background-image: linear-gradient(335deg, darkgreen, seagreen);
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 100px;
     color: darkgreen;
     font-weight: bolder;
     font-family: "Arial Black", sans-serif;
-
 }
 
 .emily-sweden-map p {

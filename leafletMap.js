@@ -3,6 +3,8 @@
     https://leafletjs.com/examples/choropleth/
     Country polygon data for leaflet from: (slightly tweaked for our use)
     https://datahub.io/core/geo-countries
+
+    Code by Emily
  */
 
 const map = L.map('map').setView([62, 15], 4);

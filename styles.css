@@ -1,5 +1,6 @@
 p {
     font-family: Calibri, sans-serif;
+    font-size: 18px;
 }
 
 h1 {
@@ -12,6 +13,7 @@ h1 {
 .introduction {
     display: flex;
     justify-content: center;
+    height: 100%;
 }
 
 /* 32% Section styling */
@@ -20,6 +22,21 @@ h1 {
     justify-content: center;
     align-items: center;
 }
+
+.procent {
+    font-size: 100px;
+    color: darkgreen;
+    font-weight: bolder;
+    font-family: "Arial Black", sans-serif;
+
+}
+
+.emily-sweden-map p {
+    font-size: 48px;
+    font-weight: bolder;
+    font-family: "Arial", sans-serif;
+}
+
 
 .nikolaj-se-top-genre{
     display: flex;
@@ -64,9 +81,10 @@ h1 {
     flex-direction: column;
 }
 #map {
-    width: 800px;
-    height: 500px;
+    width: 700px;
+    height: 400px;
 }
+
 
 .genre-info-box {
     padding: 6px 8px;

@@ -1,5 +1,4 @@
 //Nikolaj
-console.log(genreSales)
 let genres = [];
 let salePercentages = [];
 genreSales.forEach((genre) => {
@@ -7,8 +6,6 @@ genreSales.forEach((genre) => {
     salePercentages.push(genre.TotalSales)
 });
 
-console.log(genres)
-console.log(salePercentages)
 const ctx = document.querySelector('#se-sales').getContext('2d');
 const sverigeGenres = new Chart(ctx, {
     type: 'bar',

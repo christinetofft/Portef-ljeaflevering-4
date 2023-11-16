@@ -74,7 +74,7 @@ geojson = L.geoJson(countryData, {
 }).addTo(map);
 
 // ----------------------
-// Info box functionality base functionality
+// Info box functionality
 // ----------------------
 let genreInfoBox = L.control();
 
@@ -85,9 +85,9 @@ genreInfoBox.onAdd = function() {
 };
 
 /* Functionality to update info box */
-genreInfoBox.update = function(props) {
-    this._div.innerHTML = '<h4>Most popular music genre</h4>' + (props ?
-        '<b>' + props.Country + '</b><br/>' + props.favGenre
+genreInfoBox.update = function(element) {
+    this._div.innerHTML = '<h4>Most popular music genre</h4>' + (element ?
+        '<b>' + element.Country + '</b><br/>' + element.favGenre
         : 'Hover over a country');
 };
 

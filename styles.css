@@ -1,3 +1,10 @@
+
+section {
+    width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 p {
     font-family: Calibri, sans-serif;
     font-size: 18px;
@@ -21,6 +28,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 40px;
 }
 
 .procent {
@@ -48,11 +56,11 @@ h1 {
     font-weight: bold;
     font-family: Calibri, sans-serif;
 }
+
 .nikolaj-graf{
-    width: 66%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 40px;
 }
+
 
 .christine-lande-latin{
     text-align: center;
@@ -60,10 +68,8 @@ h1 {
     font-weight: bold;
     font-family: Calibri, sans-serif;
 }
+
 .christine-graf{
-    width: 66%;
-    margin-right: auto;
-    margin-left: auto;
     margin-bottom: 40px;
 }
 
@@ -82,7 +88,7 @@ h1 {
 }
 #map {
     width: 700px;
-    height: 400px;
+    height: 500px;
 }
 
 

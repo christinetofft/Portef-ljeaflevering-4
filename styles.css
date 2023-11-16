@@ -1,8 +1,15 @@
 h1 {
     text-align: center;
     font-weight: bold;
-    font-family: Calibri;
+    font-family: Calibri, sans-serif;
     font-size: 32px;
+}
+
+/* 32% Section styling */
+.emily-sweden-map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nikolaj-se-top-genre{
@@ -13,7 +20,7 @@ h1 {
     text-align: center;
     font-size: 18px;
     font-weight: bold;
-    font-family: Calibri;
+    font-family: Calibri, sans-serif;
 }
 .nikolaj-graf{
     width: 66%;
@@ -21,3 +28,39 @@ h1 {
     margin-right: auto;
 }
 
+.christine-lande-latin{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Calibri, sans-serif;
+}
+.christine-graf{
+    width: 66%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+/* Leaflet Map Section */
+.emily-world-map {
+    display: flex;
+    justify-content: center;
+}
+#map {
+    width: 800px;
+    height: 500px;
+}
+
+.genre-info-box {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.genre-info-box h4 {
+    margin: 0 0 5px;
+    color: #777;
+}

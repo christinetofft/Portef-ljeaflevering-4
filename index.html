@@ -28,24 +28,27 @@
 <body>
 <h1>Hvordan du, som musiker, kan bryde igennem på det svenske marked!</h1>
 
-<section class="intro">
-    <p>I Sverige er de helt vilde med latin-musik! De er faktisk det land der køber flest sange under genren "Latin". <br>
-    Som musiker, ville det derfor give god mening at forsøge sig i den genre, hvis man vil ind på det svenske marked. </p>
-</section>
-<section class="emily-sverige-latin">
+<section class="emily-sweden-map">
     <!-- 32% text field -->
-    <div>
-
+    <div class="emily-percent">
+        <div>
+            <h1>32%</h1>
+        </div>
+        <div>
+            <p>Af Svensk musik-salg er genren Latin</p>
+        </div>
     </div>
 
-    <!-- Leaflet map -->
-    <div id="map-of-sweden"></div>
+    <!-- 32% Picture of Sweden -->
+    <div class="emily-percent">
+        <img src="data/sweden-map.png" alt="Map of Sweden">
+    </div>
 </section>
 
 <section class="nikolaj-se-top-genre">
     <div class="nikolaj-text-til-graf">
         <p>
-            Så stor en del af svenskerne købte disse genrere
+            Så stor en del af svenskerne købte disse genrer
         </p>
     </div>
     <div class="nikolaj-graf">
@@ -54,11 +57,22 @@
 
 </section>
 <section class="christine-lande-latin">
-    <o>Sverige har den største salgsprocent i Latin-musik:</o>
-    <canvas id="sales-by-countries"></canvas>
+    <div class="christine-text">
+        <p>Sverige har den største salgsprocent i Latin-musik:</p>
+    </div>
+    <div class="christine-graf">
+        <canvas id="sales-by-countries"></canvas>
+    </div>
+
 
 </section>
+
+<section class="emily-world-map">
+    <!-- Leaflet map -->
+    <div id="map"></div>
+</section>
 <script src="sweden-genre-sales.js"></script>
+<script src="data/countryLocationData.js"></script>
 <script src="latin-sales-by-countries.js"></script>
 <script src="main.js"></script>
 <script src="leafletMap.js"></script>

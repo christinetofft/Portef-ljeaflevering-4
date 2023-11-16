@@ -4,7 +4,7 @@
     Country polygon data for leaflet from: (slightly tweaked for our use)
     https://datahub.io/core/geo-countries
 
-    Code by Emily
+    By Emily
  */
 
 const map = L.map('map').setView([62, 15], 4);
@@ -68,6 +68,7 @@ function mouseEventListeners(feature, mapLayer) {
     });
 }
 
+/* Apply styling */
 geojson = L.geoJson(countryData, {
     style: mapStyle,
     onEachFeature: mouseEventListeners

@@ -1,8 +1,17 @@
+p {
+    font-family: Calibri, sans-serif;
+}
+
 h1 {
     text-align: center;
     font-weight: bold;
     font-family: Calibri, sans-serif;
     font-size: 32px;
+}
+
+.introduction {
+    display: flex;
+    justify-content: center;
 }
 
 /* 32% Section styling */
@@ -38,14 +47,21 @@ h1 {
     width: 66%;
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 40px;
 }
 
-
+.emily-text{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Calibri, sans-serif;
+}
 
 /* Leaflet Map Section */
 .emily-world-map {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 #map {
     width: 800px;

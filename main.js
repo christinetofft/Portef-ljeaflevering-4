@@ -1,4 +1,8 @@
-//Nikolaj
+/*
+   Nedenstående kode primært skrevet af Nikolaj
+   Christine og Emily har af og til måske hjulpet / skrevet med på en en linje eller to
+ */
+
 //Laver 2 tomme arrays som skal være data for barchartet
 const genres = [];
 const salePercentages = [];
@@ -71,7 +75,11 @@ const sverigeGenres = new Chart(ctx, {
 })
 
 
-//Christine:
+
+/*
+   Nedenstående kode primært skrevet af Christine
+   Emily og Nikolaj har af og til måske hjulpet / skrevet med på en en linje eller to
+ */
 
 const country = [];
 const percentageOfSales = [];

@@ -7,6 +7,7 @@
     By Emily
  */
 
+/* Adding the world map, setting view to focus on Sweden by default */
 const map = L.map('map').setView([62, 15], 4);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 5,
@@ -23,7 +24,7 @@ function getCountry(country) {
            'pink';
 }
 
-/* Add a basic color to the entire map */
+/* Add a basic style to the map */
 function mapStyle(feature) {
     return {
         fillColor: getCountry(feature.properties.Country),
@@ -68,7 +69,7 @@ function mouseEventListeners(feature, mapLayer) {
     });
 }
 
-/* Apply styling */
+/* Apply styling to map */
 geojson = L.geoJson(countryData, {
     style: mapStyle,
     onEachFeature: mouseEventListeners
@@ -79,17 +80,19 @@ geojson = L.geoJson(countryData, {
 // ----------------------
 let genreInfoBox = L.control();
 
+/* Base functionality for the info box */
 genreInfoBox.onAdd = function() {
     this._div = L.DomUtil.create('div', 'genre-info-box'); // Makes a div element with class "info"
     this.update();
     return this._div;
 };
 
-/* Functionality to update info box */
+/* Functionality for updating the info box */
 genreInfoBox.update = function(element) {
     this._div.innerHTML = '<h4>Most popular music genre</h4>' + (element ?
         '<b>' + element.Country + '</b><br/>' + element.favGenre
         : 'Hover over a country');
 };
 
+/* Add the info box to the map */
 genreInfoBox.addTo(map);

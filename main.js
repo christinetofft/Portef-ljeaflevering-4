@@ -105,14 +105,14 @@ new Chart(latinSalesChart, {
     },
     options: {
         indexAxis: 'y', //Gør så det bliver en horizontal bar
-        responsive: true, //--|
-        maintainAspectRatio: false,
+        responsive: true, //--||--
+        maintainAspectRatio: false, //--||--
         plugins: {
             legend: {
                 display: false,
             },
             tooltip: {
-                callbacks: {
+                callbacks: { //Tilføjer et %-tegn i 'tooltippen' der kommer frem når musen 'hover' over en bar.
                     label: function(tooltipItem) {
                         return 'Procent: ' + tooltipItem.raw + '%';
                     }
@@ -124,7 +124,7 @@ new Chart(latinSalesChart, {
                 grid: {
                     display: false,
                 },
-                ticks: {
+                ticks: { //Tilføjer % til tallene på x-aksen
                     callback: function (value) {
                         return value + "%";
                     },
@@ -137,7 +137,7 @@ new Chart(latinSalesChart, {
                 grid: {
                     display: false,
                 },
-                ticks: {
+                ticks: { //Gør så kun "Sweden" står med bold skrift, da det har index = 0.
                     font: function(context) {
                         if (context.index === 0)
                         return {

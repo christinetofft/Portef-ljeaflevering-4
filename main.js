@@ -101,12 +101,11 @@ new Chart(latinSalesChart, {
             backgroundColor: barColors,
             barThickness: 14,
             data: percentageOfSales,
-            borderColor: 'black',
         }]
     },
     options: {
-        indexAxis: 'y',
-        responsive: true,
+        indexAxis: 'y', //Gør så det bliver en horizontal bar
+        responsive: true, //--|
         maintainAspectRatio: false,
         plugins: {
             legend: {
